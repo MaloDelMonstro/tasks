@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Экипаж миссии</h1>
+
+<h2>Требуемые профессии для успешной работы миссии</h2>
+
+{% if list_type == 'ol' %}
+<ol>
+    {% for prof in professions %}
+    <li>{{ prof }}</li>
+    {% endfor %}
+</ol>
+
+{% elif list_type == 'ul' %}
+<ul>
+    {% for prof in professions %}
+    <li>{{ prof }}</li>
+    {% endfor %}
+</ul>
+
+{% else %}
+<div class="error">
+    <p>Ошибка: Неверный параметр формата списка.</p>
+    <p>Используйте <code>ol</code> для нумерованного или <code>ul</code> для маркированного.</p>
+    <p>Примеры:</p>
+    <ul>
+        <li>/list_prof/ol</li>
+        <li>/list_prof/ul</li>
+    </ul>
+</div>
+{% endif %}
+
+{% endblock %}
