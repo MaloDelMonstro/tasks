@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Тренировки: {{ profession }} - Марс{% endblock %}
+
+{% block content %}
+<h1>Подготовка к полёту на Марс</h1>
+
+<div class="info-box">
+    <p><strong>Специальность:</strong> {{ profession }}</p>
+    <p><strong>Длительность полёта:</strong> около 6 месяцев</p>
+</div>
+
+<h2>{{ header_text }}</h2>
+
+<div class="training-scheme">
+    <img src="{{ scheme_image }}" 
+         alt="Схема расположения {{ 'инженерных тренажёров' if is_engineering else 'научных симуляторов' }}"
+         class="scheme-image">
+</div>
+
+<div class="info-box">
+    <h3>Программа тренировок:</h3>
+    <ul>
+        {% for item in training_program %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<p><em>Продолжительность тренировок: 2 часа ежедневно</em></p>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    h2 {
+        color: {{ '#4CAF50' if is_engineering else '#2196F3' }};
+        border-bottom: 3px solid {{ '#4CAF50' if is_engineering else '#2196F3' }};
+        padding-bottom: 10px;
+    }
+</style>
+{% endblock %}
