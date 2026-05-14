@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Копия вашей анкеты</h2>
+
+<div class="card">
+    <h4>Личные данные</h4>
+    <p><strong>Обращение:</strong> {{ title }}</p>
+    <p><strong>Фамилия:</strong> {{ surname }}</p>
+    <p><strong>Имя:</strong> {{ name }}</p>
+    <p><strong>Пол:</strong> {{ sex }}</p>
+
+    <h4>Профессиональный блок</h4>
+    <p><strong>Образование:</strong> {{ education }}</p>
+    <p><strong>Профессия:</strong> {{ profession }}</p>
+
+    <h4>Статус</h4>
+    <p><strong>Мотивация:</strong> {{ motivation }}</p>
+    <p><strong>Готовность:</strong> {{ ready }}</p>
+</div>
+{% endblock %}
