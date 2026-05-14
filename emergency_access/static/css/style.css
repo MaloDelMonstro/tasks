@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    width: 200px;
+    height: 60px;
+    margin: 0 auto 15px;
+    background: url('../images/mars_logo.png') center/contain no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    border-radius: 5px;
+}
+
+.logo {
+    background: url('../images/mars_logo.png') center/contain no-repeat;
+}
+
+h1 {
+    color: #1e3c72;
+    margin: 0;
+    font-size: 24px;
+}
+
+.emergency-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #c45b3a;
+    text-align: center;
+    margin-top: 0;
+}
+
+.warning {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 12px;
+    margin-bottom: 25px;
+    color: #856404;
+    font-weight: bold;
+    text-align: center;
+}
+
+fieldset {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: #2a5298;
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+label input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.btn-emergency {
+    width: 100%;
+    padding: 15px;
+    background: #c45b3a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background 0.3s;
+}
+
+.btn-emergency:hover {
+    background: #a04a2e;
+}

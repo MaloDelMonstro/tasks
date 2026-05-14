@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="emergency-form">
+    <h2>Аварийный доступ</h2>
+    <p class="warning">Требуется авторизация двух членов экипажа!</p>
+    
+    <form method="POST">
+        <fieldset>
+            <legend>Данные астронавта</legend>
+            <label>
+                ID астронавта:
+                <input type="text" name="astronaut_id" required>
+            </label>
+            <label>
+                Пароль астронавта:
+                <input type="password" name="astronaut_pass" required>
+            </label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Данные капитана (или заместителя)</legend>
+            <label>
+                ID капитана:
+                <input type="text" name="captain_id" required>
+            </label>
+            <label>
+                Токен капитана:
+                <input type="password" name="captain_token" required>
+            </label>
+        </fieldset>
+        
+        <button type="submit" class="btn-emergency">ПОЛУЧИТЬ ДОСТУП</button>
+    </form>
+</div>
+{% endblock %}
