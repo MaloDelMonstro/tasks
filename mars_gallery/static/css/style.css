@@ -1,0 +1,159 @@
+body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.bg-mars {
+    background: linear-gradient(135deg, #c1440e 0%, #8b3a0f 100%) !important;
+}
+
+.bg-mars-dark {
+    background-color: #1a0f0a !important;
+}
+
+.bg-mars-accent {
+    background-color: #ff6b35 !important;
+}
+
+.mars-title {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.gallery-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(193, 68, 14, 0.4);
+}
+
+.image-wrapper {
+    position: relative;
+    padding-top: 75%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.mars-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-card:hover .mars-image {
+    transform: scale(1.05);
+}
+
+.upload-card {
+    background-color: #1e1e1e;
+    border: 2px solid #c1440e;
+    border-radius: 10px;
+}
+
+.upload-card .card-header {
+    background: linear-gradient(135deg, #c1440e 0%, #8b3a0f 100%);
+    border-radius: 8px 8px 0 0 !important;
+    font-family: 'Courier New', monospace;
+}
+
+.btn-mars {
+    background: linear-gradient(135deg, #c1440e 0%, #ff6b35 100%);
+    border: none;
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-mars:hover {
+    background: linear-gradient(135deg, #ff6b35 0%, #c1440e 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(193, 68, 14, 0.4);
+    color: white;
+}
+
+.btn-outline-success:hover,
+.btn-outline-danger:hover {
+    transform: translateY(-1px);
+}
+
+.form-control {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    color: #00ff41;
+    font-family: 'Courier New', monospace;
+}
+
+.form-control:focus {
+    background-color: #333;
+    border-color: #c1440e;
+    box-shadow: 0 0 0 0.2rem rgba(193, 68, 14, 0.25);
+    color: #00ff41;
+}
+
+.mars-label {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #ff6b35;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Courier New', monospace;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .mars-title {
+        font-size: 1.2rem;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.5s ease;
+}
+
+.card-footer {
+    background-color: #2b2b2b;
+    border-top: 1px solid #333;
+    font-family: 'Courier New', monospace;
+}
+
+.display-1 {
+    font-size: 5rem;
+    opacity: 0.5;
+}

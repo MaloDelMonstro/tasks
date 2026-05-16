@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Галерея марсианских пейзажей{% endblock %}
+
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="mars-title display-4">ГАЛЕРЕЯ МАРСИАНСКИХ ПЕЙЗАЖЕЙ</h1>
+    <p class="lead text-muted">Коллекция изображений с поверхности Красной планеты</p>
+    <div class="badge bg-mars-accent px-3 py-2">
+        Всего изображений: {{ images|length }}
+    </div>
+</div>
+
+{% if images %}
+<div class="row g-4">
+    {% for image in images %}
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 gallery-card">
+            <div class="image-wrapper">
+                <img src="{{ url_for('static', filename='img/' + image) }}" 
+                     class="card-img-top mars-image" 
+                     alt="{{ image }}"
+                     loading="lazy">
+            </div>
+            <div class="card-body">
+                <h6 class="card-title text-truncate" title="{{ image }}">
+                    📄 {{ image }}
+                </h6>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <a href="{{ url_for('static', filename='img/' + image) }}" 
+                       class="btn btn-sm btn-outline-success" 
+                       target="_blank">
+                        Просмотр
+                    </a>
+                    <form action="{{ url_for('delete_image', filename=image) }}" 
+                          method="POST" 
+                          class="d-inline"
+                          onsubmit="return confirm('Удалить это изображение?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">
+                            Удалить
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="card-footer text-muted small">
+                #{{ loop.index }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="text-center py-5">
+    <h3 class="text-muted">ГАЛЕРЕЯ ПУСТА</h3>
+    <p class="text-muted mb-4">Загрузите первое изображение с поверхности Марса</p>
+    <a href="{{ url_for('upload') }}" class="btn btn-mars btn-lg">
+        ЗАГРУЗИТЬ ИЗОБРАЖЕНИЕ
+    </a>
+</div>
+{% endif %}
+{% endblock %}
