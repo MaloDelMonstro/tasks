@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Член экипажа: {{ member.surname }} {{ member.name }}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card crew-card">
+            <div class="card-header bg-mars text-white text-center">
+                <h2 class="mb-0 mars-title">ЧЛЕН ЭКИПАЖА</h2>
+            </div>
+            
+            <div class="card-body text-center">
+                <div class="mb-4">
+                    <img src="{{ member.photo }}" 
+                         alt="{{ member.name }} {{ member.surname }}"
+                         class="crew-photo rounded-circle border border-4 border-mars-accent">
+                </div>
+
+                <h3 class="crew-name mb-1">
+                    {{ member.surname | upper }}
+                </h3>
+                <h4 class="crew-name-sub mb-4">
+                    {{ member.name }}
+                </h4>
+
+                <div class="specialties-section">
+                    <h5 class="mb-3 text-muted">
+                        <span class="badge bg-mars-accent">СПЕЦИАЛЬНОСТИ</span>
+                    </h5>
+                    
+                    <ul class="list-unstyled">
+                        {% for specialty in member.specialties | sort %}
+                        <li class="specialty-item mb-2">
+                            <span class="badge bg-secondary specialty-badge">
+                                {{ loop.index }}. {{ specialty }}
+                            </span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="alert alert-info mt-4">
+                    <small>
+                        <strong>Всего специальностей:</strong> {{ member.specialties | length }}<br>
+                        <strong>Первая (по алфавиту):</strong> {{ member.specialties | sort | first }}
+                    </small>
+                </div>
+            </div>
+
+            <div class="card-footer text-center bg-mars-dark">
+                <a href="{{ url_for('member') }}" class="btn btn-mars">
+                    ПОКАЗАТЬ ДРУГОГО ЧЛЕНА ЭКИПАЖА
+                </a>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="{{ url_for('index') }}" class="text-muted">← На главную</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

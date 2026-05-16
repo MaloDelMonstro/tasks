@@ -1,0 +1,40 @@
+{
+    "crew": [
+        {
+            "name": "Тони",
+            "surname": "Старк",
+            "photo": "https://via.placeholder.com/300x400/c1440e/ffffff?text=Mark+Watney",
+            "specialties": ["Ботаник", "Инженер", "Геолог", "Химик"]
+        },
+        {
+            "name": "Эсканор",
+            "surname": "грех",
+            "photo": "https://via.placeholder.com/300x400/2a5298/ffffff?text=Melissa+Lewis",
+            "specialties": ["Командир", "Пилот", "Навигатор", "Физик"]
+        },
+        {
+            "name": "Рик",
+            "surname": "C137",
+            "photo": "https://via.placeholder.com/300x400/4a90e2/ffffff?text=Rick+Martinez",
+            "specialties": ["Пилот", "Штурман", "Инженер связи"]
+        },
+        {
+            "name": "Уолтер",
+            "surname": "Уайт",
+            "photo": "https://via.placeholder.com/300x400/e67e22/ffffff?text=Beth+Johanssen",
+            "specialties": ["Системный администратор", "Химик", "Астроном"]
+        },
+        {
+            "name": "Крис",
+            "surname": "Гриффин",
+            "photo": "https://via.placeholder.com/300x400/27ae60/ffffff?text=Chris+Zheng",
+            "specialties": ["Биолог", "Врач", "Фармаколог"]
+        },
+        {
+            "name": "Алекс",
+            "surname": "Джексон",
+            "photo": "https://via.placeholder.com/300x400/8e44ad/ffffff?text=Alex+Vogel",
+            "specialties": ["Химик", "Астрофизик", "Специалист по жизнеобеспечению"]
+        }
+    ]
+}

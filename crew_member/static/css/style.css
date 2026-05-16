@@ -1,0 +1,134 @@
+body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.bg-mars {
+    background: linear-gradient(135deg, #c1440e 0%, #8b3a0f 100%) !important;
+}
+
+.bg-mars-dark {
+    background-color: #1a0f0a !important;
+}
+
+.bg-mars-accent {
+    background-color: #ff6b35 !important;
+}
+
+.border-mars-accent {
+    border-color: #ff6b35 !important;
+}
+
+.mars-title {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.crew-card {
+    background-color: #1e1e1e;
+    border: 2px solid #c1440e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(193, 68, 14, 0.3);
+}
+
+.crew-card .card-header {
+    background: linear-gradient(135deg, #c1440e 0%, #8b3a0f 100%);
+    padding: 1.5rem;
+}
+
+.crew-card .card-footer {
+    background-color: #2b2b2b;
+    padding: 1.5rem;
+}
+
+.crew-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.crew-name {
+    color: #ff6b35;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+
+.crew-name-sub {
+    color: #888;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.specialties-section {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.specialty-item {
+    transition: transform 0.2s ease;
+}
+
+.specialty-item:hover {
+    transform: translateX(5px);
+}
+
+.specialty-badge {
+    font-size: 0.95rem;
+    padding: 8px 15px;
+    font-family: 'Courier New', monospace;
+    background-color: #444 !important;
+    border: 1px solid #555;
+}
+
+.btn-mars {
+    background: linear-gradient(135deg, #c1440e 0%, #ff6b35 100%);
+    border: none;
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-mars:hover {
+    background: linear-gradient(135deg, #ff6b35 0%, #c1440e 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(193, 68, 14, 0.5);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .crew-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .crew-name {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.5s ease;
+}
