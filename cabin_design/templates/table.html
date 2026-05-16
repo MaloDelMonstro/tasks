@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Оформление каюты</h2>
+
+<div class="info">
+    <p>Пол: <strong>{{ gender }}</strong> | Возраст: <strong>{{ age }} лет</strong></p>
+</div>
+
+<table class="cabin-table">
+    <thead>
+        <tr>
+            <th>Цвет стен</th>
+            <th>Эмблема</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="color-cell">
+                <div class="color-preview" style="background-color: {{ wall_color }};"></div>
+                <p>{{ color_name }}</p>
+            </td>
+            <td class="alien-cell">
+                <img src="{{ url_for('static', filename='images/' + alien_image) }}" 
+                     alt="{{ alien_type }}"
+                     class="alien-image">
+                <p>{{ alien_type }}</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="back-link">
+    <a href="/">← На главную</a>
+</div>
+{% endblock %}

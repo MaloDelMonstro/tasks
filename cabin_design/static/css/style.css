@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: #1e3c72;
+    margin: 0;
+    font-size: 24px;
+}
+
+.subtitle {
+    color: #999;
+    font-style: italic;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.info {
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.cabin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cabin-table thead {
+    background: #e0e0e0;
+}
+
+.cabin-table th,
+.cabin-table td {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.cabin-table th {
+    font-weight: bold;
+    color: #333;
+}
+
+.color-preview {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.color-cell p {
+    margin: 5px 0 0;
+    font-weight: bold;
+}
+
+.alien-image {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.alien-cell p {
+    margin: 5px 0 0;
+    font-weight: bold;
+    color: #555;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.back-link a {
+    color: #2a5298;
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
