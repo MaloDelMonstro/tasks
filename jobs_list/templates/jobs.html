@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Работы - Марсианская миссия{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4">Список работ</h2>
+
+{% if not jobs %}
+    <div class="alert alert-warning text-center">
+        Нет запланированных работ.
+    </div>
+{% else %}
+    {% for job in jobs %}
+    <div class="job-card">
+        <div class="job-header">
+            Работа №{{ job.id }}
+        </div>
+        <table class="table table-dark table-striped">
+            <tr>
+                <td><strong>Название работы:</strong></td>
+                <td>{{ job.job }}</td>
+            </tr>
+            <tr>
+                <td><strong>Ответственный:</strong></td>
+                <td>
+                    {% if job.leader %}
+                        {{ job.leader.surname }} {{ job.leader.name }}
+                    {% else %}
+                        Не назначен
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Продолжительность (часов):</strong></td>
+                <td>{{ job.work_size }}</td>
+            </tr>
+            <tr>
+                <td><strong>Команда (ID):</strong></td>
+                <td>
+                    {% if job.collaborators %}
+                        {{ job.collaborators }}
+                    {% else %}
+                        Нет участников
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Статус:</strong></td>
+                <td>
+                    {% if job.is_finished %}
+                        <span class="status-finished">Завершена</span>
+                    {% else %}
+                        <span class="status-not-finished">Не завершена</span>
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </div>
+    {% endfor %}
+{% endif %}
+
+<div class="text-center mt-4">
+    <a href="/" class="btn btn-secondary">← Назад на главную</a>
+</div>
+{% endblock %}
